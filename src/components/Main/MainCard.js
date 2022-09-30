@@ -31,7 +31,7 @@ const MainCard1 = () => {
       .slice(0, !viewMore ? 50 : cryptoData.length)
       .map((coinData, index) => (
         <div
-          className="flex flex-grow md:items-center py-1 text-sm h-14"
+          className="flex flex-grow md:items-center py-1 text-sm h-14 hover:bg-red-50"
           key={coinData.id + index}
         >
           <div className="pl-3 basis-2/6">
@@ -63,7 +63,7 @@ const MainCard1 = () => {
               <li className="hidden md:block  text-end basis-36">
                 ${coinData.volumeUsd24Hr}b
               </li>
-              <li className="text-end basis-36">
+              <li className={`text-end basis-36 ${coinData.changePercent24Hr >= 0 ? "text-green-500": "text-red-500"}`}>
                 {coinData.changePercent24Hr}%
               </li>
             </ul>
