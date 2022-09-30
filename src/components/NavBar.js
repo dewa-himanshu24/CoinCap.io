@@ -3,6 +3,11 @@ import { IoMdSettings } from "react-icons/io";
 import { HiSearch } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
+import { FaBitcoin } from "react-icons/fa";
+import { RiArrowLeftRightLine } from "react-icons/ri";
+import { MdSwapCalls } from "react-icons/md";
+import { FaRegNewspaper } from "react-icons/fa";
+import { GoTriangleDown } from "react-icons/go";
 
 const NavBar = () => {
   const [navOn, setNavOn] = useState(false);
@@ -49,26 +54,57 @@ const NavBar = () => {
           className="md:hidden lg:hidden xl:hidden 2xl:hidden"
           onClick={handleClick}
         >
-          {!navOn ? (
-            <GiHamburgerMenu className="w-5" size={25} />
-          ) : (
+          {navOn ? (
             <ImCross className="w-5" size={25} />
+            ) : (
+            <GiHamburgerMenu className="w-5" size={25} />
           )}
         </div>
       </div>
 
-      <div className={!navOn ? "hidden" : "absolute grid-rows-2 w-52 h-screen"}>
-        <div className="row-span-1">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+      <div
+        className={
+          navOn
+          ? " top-0 md:hidden absolute flex flex-col bg-white w-44 h-screen translate-x-0 transition ease-in-out duration-300"
+            : " top-0 -translate-x-full absolute transition ease-in-out duration-300"
+        }
+      >
+        <div className="flex flex-col border-b-2 border-gray-300 ">
+          <div className="flex flex-col items-center p-2">
+            <FaBitcoin size={30} />
+            <span>Coins</span>
+          </div>
+          <div className="flex flex-col items-center p-2">
+            <RiArrowLeftRightLine size={30} />
+            <span>Exchanges</span>
+          </div>
+          <div className="flex flex-col items-center p-2">
+            <MdSwapCalls size={30} />
+            <span>Swap</span>
+          </div>
+          <div className="flex flex-col items-center p-2">
+            <FaRegNewspaper size={30} />
+            <span>API</span>
+          </div>
+          <div className="flex flex-col items-center p-2">
+            <IoMdSettings size={30} />
+            <span>Setting</span>
+          </div>
+          <div className="flex flex-col items-center p-2">
+            <button className="bg-[#18C683] w-32 h-9 rounded-full text-white drop-shadow-xl text-sm font-bold hover:animate-bounce hover:ease-in-out">
+              Connect Wallet
+            </button>
+          </div>
         </div>
-        <div className="row-span-1">
-          <div></div>
-          <div></div>
+        <div className="">
+          <div className="flex flex-row justify-between p-2">
+            <div>USD</div>
+            <GoTriangleDown/>
+          </div>
+          <div className="flex flex-row justify-between p-2">
+            <div>English</div>
+            <GoTriangleDown/>
+          </div>
         </div>
       </div>
     </div>
