@@ -1,5 +1,5 @@
 import React from "react";
-const MainHeader = () => {
+const CryptoHeader = () => {
   return (
     <div className="2xl:mx-20 xl:mx-0">
       <div className="flex bg-white w-screen 2xl:w-3/5 xl:w-9/12 xl:mx-auto lg:w-4/5 lg:mx-auto md:w-11/12 md:mx-auto  h-14 items-center rounded-tl-md border-b-2 border-gray-200 shadow-2xl">
@@ -42,5 +42,5 @@ const MainHeader = () => {
   );
 };
 
-export default MainHeader;
+export default CryptoHeader;
 

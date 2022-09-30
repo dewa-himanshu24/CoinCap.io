@@ -12,7 +12,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="py-3 2xl:px-10 xl:px-16 mt-0 bg-white sticky top-0 shadow-md">
+    <div className="py-1 2xl:px-10 xl:px-16 mt-0 bg-white sticky top-0 shadow-md">
       <div className="flex justify-between p-1 px-8 md:flex 2xl:w-3/5 2xl:mx-auto xl:w-9/12 xl:mx-auto lg:w-4/5 lg:mx-auto md:w-5/6 md:mx-auto lg:justify-between 2xl:justify-between md:justify-between items-center">
         <div className="flex md:hidden ">
           <HiSearch size={25} />
@@ -20,9 +20,13 @@ const NavBar = () => {
 
         <div className="hidden md:block">
           <ul className="flex space-x-4">
-            <li className="text-sm">Coins</li>
-            <li className="text-sm">Exchanges</li>
-            <li className="text-sm">Swap</li>
+            <li className="text-sm hover:bg-red-50 p-4 cursor-pointer">
+              Coins
+            </li>
+            <li className="text-sm hover:bg-red-50 p-4 cursor-pointer">
+              Exchanges
+            </li>
+            <li className="text-sm hover:bg-red-50 p-4 cursor-pointer">Swap</li>
           </ul>
         </div>
 
@@ -37,7 +41,7 @@ const NavBar = () => {
         <div className="hidden md:flex space-x-10 items-center">
           <HiSearch />
           <IoMdSettings />
-          <button className="bg-[#18C683] w-36 h-9 rounded-full text-white drop-shadow-xl text-sm font-bold">
+          <button className="bg-[#18C683] w-36 h-9 rounded-full text-white drop-shadow-xl text-sm font-bold hover:animate-bounce hover:ease-in-out">
             Connect Wallet
           </button>
         </div>

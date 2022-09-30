@@ -2,21 +2,24 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "ping-once": "ping 1s linear infinite",
+      },
+    },
     screens: {
-
-      'md': '768px',
+      md: "768px",
       // => @media (min-width: 768px) { ... }
 
-      'lg': '997px',
+      lg: "997px",
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1199px',
+      xl: "1199px",
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1536px',
+      "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
-    }
+    },
   },
   plugins: [],
 };

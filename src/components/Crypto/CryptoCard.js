@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { cryptoActions } from "../../store/crypto-slice";
 import { processData } from "../../ulits/utils";
 
-const MainCard1 = () => {
+const CryptoCard = () => {
   const dispatch = useDispatch();
   const cryptoData = useSelector((state) => state.crypto.cryptoData);
   const [viewMore, setViewMore] = useState(false);
@@ -36,7 +36,9 @@ const MainCard1 = () => {
         >
           <div className="pl-3 basis-2/6">
             <ul className="flex flex-grow items-center">
-              <li className="hidden md:block basis-24 w-20  pl-6">{coinData.rank}</li>
+              <li className="hidden md:block basis-24 w-20  pl-6">
+                {coinData.rank}
+              </li>
               <li className="flex w-64">
                 <div>
                   <img
@@ -58,12 +60,22 @@ const MainCard1 = () => {
               <li className="hidden md:block  text-end basis-32">
                 ${coinData.marketCapUsd}
               </li>
-              <li className="hidden  text-end basis-32 md:hidden lg:block">${coinData.vwap24Hr}</li>
-              <li className="hidden text-end basis-28 md:hidden lg:block">{coinData.supply}</li>
+              <li className="hidden  text-end basis-32 md:hidden lg:block">
+                ${coinData.vwap24Hr}
+              </li>
+              <li className="hidden text-end basis-28 md:hidden lg:block">
+                {coinData.supply}
+              </li>
               <li className="hidden md:block  text-end basis-36">
                 ${coinData.volumeUsd24Hr}b
               </li>
-              <li className={`text-end basis-36 ${coinData.changePercent24Hr >= 0 ? "text-green-500": "text-red-500"}`}>
+              <li
+                className={`text-end basis-36 ${
+                  coinData.changePercent24Hr >= 0
+                    ? "text-green-500"
+                    : "text-red-500"
+                }`}
+              >
                 {coinData.changePercent24Hr}%
               </li>
             </ul>
@@ -79,7 +91,7 @@ const MainCard1 = () => {
       </div>
       <div className="flex m-6">
         <button
-          className="bg-[#18C683] w-36 h-9 rounded-full text-white drop-shadow-xl text-sm font-bold mx-auto"
+          className="bg-[#18C683] w-36 h-9 rounded-full text-white drop-shadow-xl text-sm font-bold mx-auto hover:animate-bounce hover:ease-in-out"
           onClick={() => setViewMore(!viewMore)}
         >
           {!viewMore ? "View More" : "View Less"}
@@ -89,4 +101,4 @@ const MainCard1 = () => {
   );
 };
 
-export default MainCard1;
+export default CryptoCard;
