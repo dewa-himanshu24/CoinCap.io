@@ -9,12 +9,10 @@ import store from "./store";
 function App() {
   return (
     <Provider store={store}>
-      <div className="w-screen">
         <NavBar />
         <Header />
         <Main />
         <Footer />
-      </div>
     </Provider>
   );
 }
