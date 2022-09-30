@@ -65,8 +65,8 @@ const NavBar = () => {
       <div
         className={
           navOn
-          ? " top-0 md:hidden absolute flex flex-col bg-white w-44 h-screen translate-x-0 transition ease-in-out duration-300"
-            : " top-0 -translate-x-full absolute transition ease-in-out duration-300"
+          ? "left-0 top-0 md:hidden absolute flex flex-col bg-white w-44 h-screen translate-x-0 transition ease-in-out duration-300"
+            : "left-0 top-0 -translate-x-full absolute transition ease-in-out duration-300"
         }
       >
         <div className="flex flex-col border-b-2 border-gray-300 ">
