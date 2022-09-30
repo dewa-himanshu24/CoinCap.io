@@ -20,7 +20,7 @@ const Header = () => {
           )}
         </div>
       </div>
-      <div className="hidden md:block 2xl:w-3/4 2xl:mx-auto  xl:mx-30 xl:mx-auto xl:w-9/12 lg:w-4/5 lg:mx-auto md:w-11/12 md:mx-auto">
+      <div className="hidden md:block 2xl:w-4/5 2xl:mx-auto  xl:mx-30 xl:mx-auto xl:w-9/12 lg:w-4/5 lg:mx-auto md:w-11/12 md:mx-auto">
         <div className="grid 2xl:grid-cols-6 xl:grid-cols-6 lg:grid-cols-3 md:grid-cols-3 md:gap-y-5 pt-4 text-white 2xl:mx-40 xl:mx-38">
           <div className="text-center col-span-1">
             <h3 className="text-sm font-semibold">MARKET CAP</h3>

@@ -86,12 +86,12 @@ const CryptoCard = () => {
 
   return (
     <div className="2xl:mx-20 xl:mx-0">
-      <div className="pr-5 bg-white w-screen 2xl:w-3/5 xl:w-9/12 xl:mx-auto lg:w-4/5 lg:mx-auto md:w-11/12 md:mx-auto p-1 rounded-tl-sm divide-y divide-slate-200 border-b-2 border-gray-200 shadow-2xl">
+      <div className="pr-5 bg-white w-screen 2xl:w-4/6 xl:w-9/12 xl:mx-auto lg:w-4/5 lg:mx-auto md:w-11/12 md:mx-auto p-1 rounded-tl-sm divide-y divide-slate-200 border-b-2 border-gray-200 shadow-2xl">
         {generateCoinDataList()}
       </div>
       <div className="flex m-6">
         <button
-          className="bg-[#18C683] w-36 h-9 rounded-full text-white drop-shadow-xl text-sm font-bold mx-auto hover:animate-bounce hover:ease-in-out"
+          className="bg-[#18C683] w-36 h-9 rounded-full text-white drop-shadow-xl text-sm font-bold mx-auto hover:-translate-y-1 transition duration-300"
           onClick={() => setViewMore(!viewMore)}
         >
           {!viewMore ? "View More" : "View Less"}
