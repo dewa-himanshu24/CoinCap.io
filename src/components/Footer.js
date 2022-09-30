@@ -38,8 +38,8 @@ const Footer = () => {
 
         <div className="flex flex-col w-72 h-52">
           <h1 className="font-semibold text-sm">COINCAP APP AVAILABLE ON</h1>
-          <img src="/static/logo/google_play.svg" alt="google-play" className="w-36"/>
-          <img src="/static/logo/apple_store.svg" alt="apple-store" className="w-36"/>
+          <img src="/static/logo/google_play.svg" alt="google-play" className="w-36 opacity-40 hover:opacity-100"/>
+          <img src="/static/logo/apple_store.svg" alt="apple-store" className="w-36 opacity-40 hover:opacity-100"/>
 
         </div>
       </div>

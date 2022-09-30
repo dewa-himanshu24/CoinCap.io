@@ -4,15 +4,17 @@ import Header from "./components/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer";
 import { Provider } from "react-redux";
-import store from './store'
+import store from "./store";
 
 function App() {
   return (
     <Provider store={store}>
-      <NavBar />
-      <Header />
-      <Main />
-      <Footer />
+      <div className="w-screen">
+        <NavBar />
+        <Header />
+        <Main />
+        <Footer />
+      </div>
     </Provider>
   );
 }

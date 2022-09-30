@@ -10,6 +10,7 @@ export const processData = (data) => {
   })
 }
 
+
 function intToString(num) {
   num = num.toString().replace(/[^0-9.]/g, '');
   if (num < 1000) {

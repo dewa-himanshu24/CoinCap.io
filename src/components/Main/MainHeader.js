@@ -2,7 +2,7 @@ import React from "react";
 const MainHeader = () => {
   return (
     <div className="mx-20">
-      <div className="bg-white w-4/6 mx-auto p-1 rounded-tl-sm border-b-2 border-gray-200 shadow-2xl">
+      <div className="flex bg-white w-4/6 mx-auto  h-14 items-center p-1 rounded-tl-md border-b-2 border-gray-200 shadow-2xl">
         <div className="flex items-center py-1 text-sm">
           <div className="pl-3">
             <ul className="flex">

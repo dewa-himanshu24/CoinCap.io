@@ -4,8 +4,8 @@ import { HiSearch } from "react-icons/hi";
 
 const NavBar = () => {
   return (
-    <div className="py-3 px-10 mx-44 mt-0 bg-white ">
-      <div className="flex justify-around items-center">
+    <div className="py-3 px-10  mt-0 bg-white sticky top-0">
+      <div className="flex mx-48 justify-around items-center">
         <div>
           <ul className="flex space-x-4">
             <li className="text-sm">Coins</li>

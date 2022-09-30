@@ -31,12 +31,12 @@ const MainCard = () => {
       .slice(0, !viewMore ? 50 : cryptoData.length)
       .map((coinData, index) => (
         <div
-          className="flex items-center py-1 text-sm"
+          className="flex items-center py-1 text-sm h-14"
           key={coinData.id + index}
         >
           <div className="pl-3">
             <ul className="flex items-center">
-              <li className="flex-none w-20">{coinData.rank}</li>
+              <li className="flex-none w-20 p-2">{coinData.rank}</li>
               <li className="flex w-64">
                 <div>
                   <img
