@@ -9,7 +9,7 @@ import { MdSwapCalls } from "react-icons/md";
 import { FaRegNewspaper } from "react-icons/fa";
 import { GoTriangleDown } from "react-icons/go";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [navOn, setNavOn] = useState(false);
 
   const handleClick = () => {
@@ -45,7 +45,7 @@ const NavBar = () => {
 
         <div className="hidden md:flex space-x-10 items-center cursor-pointer">
           <HiSearch />
-          <IoMdSettings />
+          <IoMdSettings onClick={props.onShowSetting} />
           <button className="bg-[#18C683] w-36 h-9 rounded-full text-white drop-shadow-xl text-sm font-bold hover:-translate-y-1 transition duration-300">
             Connect Wallet
           </button>
@@ -87,7 +87,7 @@ const NavBar = () => {
             <span>API</span>
           </div>
           <div className="flex flex-col items-center p-2">
-            <IoMdSettings size={30} />
+            <IoMdSettings onClick={props.onShowSetting} size={30} />
             <span>Setting</span>
           </div>
           <div className="flex flex-col items-center p-2">
