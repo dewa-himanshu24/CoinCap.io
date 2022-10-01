@@ -4,3 +4,11 @@ I have also applied pagination with page size 50 i.e., only 50 currencies are vi
 
 Here is the view more button in action-
 ![coincap](https://user-images.githubusercontent.com/101580513/193403395-055e7960-2154-4c4f-a55d-50329903cd49.gif)
+
+Mobile view-
+
+![image](https://user-images.githubusercontent.com/101580513/193403636-6e1cc561-87f5-4aa8-925a-a5ff29aac5df.png)
+
+Mobile View toggles in action- 
+
+
