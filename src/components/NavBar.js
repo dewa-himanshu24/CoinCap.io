@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+
 import { IoMdSettings } from "react-icons/io";
 import { HiSearch } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -10,6 +12,7 @@ import { FaRegNewspaper } from "react-icons/fa";
 import { GoTriangleDown } from "react-icons/go";
 
 const NavBar = (props) => {
+  const darkModeStatus = useSelector(state => state.darkMode.darkModeStatus);
   const [navOn, setNavOn] = useState(false);
 
   const handleClick = () => {
@@ -17,7 +20,7 @@ const NavBar = (props) => {
   };
 
   return (
-    <div className="2xl:px-10 xl:px-16 mt-0 bg-white sticky top-0 shadow-md">
+    <div className={`2xl:px-10 xl:px-16 mt-0 ${darkModeStatus ? "bg-black" : "bg-white"} sticky top-0 shadow-md`}>
       <div className="flex justify-between px-8 md:flex 2xl:w-4/6 2xl:mx-auto xl:w-9/12 xl:mx-auto lg:w-4/5 lg:mx-auto md:w-5/6 md:mx-auto lg:justify-between 2xl:justify-between md:justify-between items-center">
         <div className="flex md:hidden ">
           <HiSearch size={25} />
