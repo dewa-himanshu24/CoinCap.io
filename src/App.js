@@ -20,11 +20,9 @@ function App() {
   };
 
   return (
-    <Provider store={store}>
+    <>
       {settingIsShown ? (
-        <Provider store={store}>
-          <Setting onClose={hideSettingHandler} />
-        </Provider>
+        <Setting onClose={hideSettingHandler} />
       ) : (
         <Provider store={store}>
           <NavBar onShowSetting={showSettingHandler} />
@@ -33,7 +31,7 @@ function App() {
           <Footer />
         </Provider>
       )}
-    </Provider>
+    </>
   );
 }
 
