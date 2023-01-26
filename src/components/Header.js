@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { GoTriangleLeft, GoTriangleDown } from "react-icons/go";
+import { useSelector } from "react-redux";
+
+
 
 const Header = () => {
+  const darkModeStatus = useSelector(state => state.darkMode.darkModeStatus);
   const [mobileHeaderListOn, setMobileHeaderListOn] = useState(false);
 
   const handleClick = () => {
@@ -9,8 +13,8 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-[#3F51B5] to-[#64B5F6] 2xl:h-48 xl:h-48 lg:h-64 md:h-64">
-      <div className="flex justify-between px-2 items-center md:hidden bg-gradient-to-r from-[#3F51B5] to-[#64B5F6] h-11">
+    <div className={`${darkModeStatus ? "bg-[#424242]": "bg-gradient-to-r from-[#3F51B5] to-[#64B5F6]"} 2xl:h-48 xl:h-48 lg:h-64 md:h-64`}>
+      <div className={`flex justify-between px-2 items-center md:hidden ${darkModeStatus ? "bg-[#424242]" : "bg-gradient-to-r from-[#3F51B5] to-[#64B5F6]"} h-11`}>
         <div className="text-white">Market Snapshot</div>
         <div onClick={handleClick}>
           {mobileHeaderListOn ? (
@@ -52,31 +56,31 @@ const Header = () => {
       <div
         className={
           mobileHeaderListOn
-            ? "flex flex-col md:hidden text-white bg-gradient-to-r from-[#3F51B5] to-[#64B5F6] 2xl:h-48 xl:h-48 lg:h-64 md:h-64"
+            ? `flex flex-col md:hidden text-white ${darkModeStatus ? "bg-[#424242]" : "bg-gradient-to-r from-[#3F51B5] to-[#64B5F6]"} 2xl:h-48 xl:h-48 lg:h-64 md:h-64`
             : "hidden"
         }
       >
-        <div className="flex justify-between px-4 py-1 border-b-2 border-[#64B5F6]">
+        <div className={`flex justify-between px-4 py-1 border-b-2 ${darkModeStatus ? "border-[#404040]" : "border-[#64B5F6]"}`}>
           <div>Market Cap:</div>
           <div>$1.15t</div>
         </div>
-        <div className="flex justify-between px-4 py-1 border-b-2 border-[#64B5F6]">
+        <div className={`flex justify-between px-4 py-1 border-b-2 ${darkModeStatus ? "border-[#404040]" : "border-[#64B5F6]"}`}>
           <div>Exchange Vol:</div>
           <div>$58.79b</div>
         </div>
-        <div className="flex justify-between px-4 py-1 border-b-2 border-[#64B5F6]">
+        <div className={`flex justify-between px-4 py-1 border-b-2 ${darkModeStatus ? "border-[#404040]" : "border-[#64B5F6]"}`}>
           <div>Assets</div>
           <div>2,295</div>
         </div>
-        <div className="flex justify-between px-4 py-1 border-b-2 border-[#64B5F6]">
+        <div className={`flex justify-between px-4 py-1 border-b-2 ${darkModeStatus ? "border-[#404040]" : "border-[#64B5F6]"}`}>
           <div>Exchanges:</div>
           <div>73</div>
         </div>
-        <div className="flex justify-between px-4 py-1 border-b-2 border-[#64B5F6]">
+        <div className={`flex justify-between px-4 py-1 border-b-2 ${darkModeStatus ? "border-[#404040]" : "border-[#64B5F6]"}`}>
           <div>Markets:</div>
           <div>13,994</div>
         </div>
-        <div className="flex justify-between px-4 py-1 border-b-2 border-[#64B5F6]">
+        <div className={`flex justify-between px-4 py-1 border-b-2 ${darkModeStatus ? "border-[#404040]" : "border-[#64B5F6]"}`}>
           <div>BTC Dom Index:</div>
           <div>31.2%</div>
         </div>
