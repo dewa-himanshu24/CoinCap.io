@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
 import { BsGearWideConnected } from "react-icons/bs";
@@ -7,6 +8,8 @@ import { darkModeActions } from "../store/dark-mode-slice";
 
 const Setting = (props) => {
   const dispatch = useDispatch();
+  const darkModeStatus = useSelector(state => state.darkMode.darkModeStatus);
+
 
   const toggleDarkModeStatusHandler = () => {
     dispatch(darkModeActions.toggleDarkModeStatus())

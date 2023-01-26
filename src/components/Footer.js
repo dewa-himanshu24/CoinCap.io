@@ -1,10 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineFacebook } from "react-icons/ai";
 
 const Footer = () => {
+  const darkModeStatus = useSelector((state) => state.darkMode.darkModeStatus);
+
   return (
-    <div className="bg-gradient-to-r from-[#3F51B5] to-[#64B5F6] h-64">
+    <div className={`${darkModeStatus ? "bg-[#424242]" : "bg-gradient-to-r from-[#3F51B5] to-[#64B5F6]"} h-64`}>
       <div className="flex mx-44 py-8 justify-center text-white">
         <div className="flex flex-col w-72 h-52">
           <h1 className="font-semibold text-sm">COINCAP.IO</h1>
